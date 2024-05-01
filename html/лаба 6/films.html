@@ -1,0 +1,275 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <title>Фильмы</title>
+    <link rel="stylesheet" href="../лаба 6/page6.css">
+    <!-- Обязательные метатеги -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- Подключение JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+</head>
+
+<div class="navBars">
+    <!--  navbar  -->
+    <nav class="navbar navbar-dark bg-dark" id="nav1">
+        <div class="container-fluid">
+            <span class="navbar-brand mb-0 h1">Предыдущие лабы:</span>
+            <ul class="nav nav-pills">
+                <li class="nav-item">
+                    <a class="nav-link active" href="../лаба 1/FirstHTML.html">Лаба 1</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="../лаба 2/SecondHTML.html">Лаба 2</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="../лаба 3/page2.html">Лаба 3</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="../лаба 4/page4.html">Лаба 4</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="../лаба 5/page5.html">Лаба 5</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <nav class="navbar navbar-light bg-light" id="nav2">
+        <div class="container-fluid">
+            <span class="navbar-brand mb-0 h1">Меню</span>
+            <ul class="nav justify-content-end">
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="../лаба 6/films.html">Фильмы</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../лаба 6/info.html">Информация</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>
+
+<body data-bs-spy="scroll">
+
+    <!--- 
+    <div class="alert alert-dark d-flex justify-content-center align-items-center" role="alert">
+        <img src="../лаба 6/7.jpg" alt=":/">
+        <p>Очень жаль. Но данная страница сейчас находится в разработке.</p>
+        <img src="../лаба 6/7.jpg" alt=":/">
+    </div>
+    <div class="d-flex justify-content-center">
+        <div class="spinner-border m-5" style="width: 5rem; height: 5rem;" role="status"></div>
+    </div>
+    --->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-sm-12">
+                <h1>Дэвид Теннант</h1>
+                <p>
+                    <b>Дата рождения</b> 18 апреля, 1971 (52 года) <br>
+                    <b>Всего фильмов</b> 245, 1980 — 2023 <br>
+                    <b>Жанры</b> драма, комедия, приключения
+                </p>
+            </div>
+
+            <div class="col-lg-6 col-sm-12">
+                <img src="../лаба 6/1.jpg" style="height: 42rem;">
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>Дополнительная информация</h1>
+        <div class="row row-cols-auto">
+            <div class="col">
+                <b>Рост</b> 1.85 м
+            </div>
+            <div class="col">
+                <b>Место рождения</b> Батгейт, Западный Лотиан, Шотландия, Великобритания
+            </div>
+            <div class="col d-none d-sm-block">
+                <p>ну я уже не знаю что писать еще</p>
+                <img src="../лаба 6/7.jpg" alt=":/">
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>Лучшие фильмы</h1>
+        <div class="row row-cols-sm-auto">
+            <div class="col-3">
+                <div class="card" style="width: 18rem; height: 42rem;">
+                    <img class="card-img-top" src="../лаба 6/4.jpg" alt="doctor who">
+                    <div class="card-body">
+                        <h5 class="card-title">Доктор Кто</h5>
+                        <p class="card-text">Пришелец, меняющий внешность и спутников, спасает вместе с ними
+                            Вселенную от космических
+                            злодеев. Научная фантастика с британским юмором</p>
+                        <a href="https://www.kinopoisk.ru/series/252089/" class="btn btn-primary">На Кинопоиске</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card" style="width: 18rem; height: 42rem;">
+                    <img class="card-img-top" src="../лаба 6/5.jpg" alt="good omens">
+                    <div class="card-body">
+                        <h5 class="card-title">Благие знамения</h5>
+                        <p class="card-text">Ангел Азирафель и демон Кроули тысячи лет живут среди людей и решают
+                            объединить усилия,
+                            чтобы предотвратить апокалипсис.</p>
+                        <a href="https://www.kinopoisk.ru/series/585727/" class="btn btn-primary">На Кинопоиске</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card" style="width: 18rem; height: 42rem;">
+                    <img class="card-img-top" src="../лаба 6/6.jpg" alt="80 days">
+                    <div class="card-body">
+                        <h5 class="card-title">Вокруг света за 80 дней</h5>
+                        <p class="card-text">Скучающий джентльмен, спровоцированный друзьями на пари, обещает за 80
+                            дней осуществить
+                            кругосветное путешествие.</p>
+                        <a href="https://www.kinopoisk.ru/series/1337642/" class="btn btn-primary">На Кинопоиске</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card" style="width: 18rem; height: 42rem;">
+                    <img class="card-img-top" src="../лаба 6/8.jpg" alt="post">
+                    <div class="card-body">
+                        <h5 class="card-title">Постановка</h5>
+                        <p class="card-text">Из-за пандемии коронавируса актеры временно остались без работы в изоляции.
+                            Но они решают продолжать репетиции удаленно.</p>
+                        <a href="https://www.kinopoisk.ru/series/1384808/" class="btn btn-primary">На Кинопоиске</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card" style="width: 18rem; height: 42rem;">
+                    <img class="card-img-top" src="../лаба 6/9.jpg" alt="jess">
+                    <div class="card-body">
+                        <h5 class="card-title">Джессика Джонс</h5>
+                        <p class="card-text">После трагических событий, оборвавших супергеройскую карьеру Джессики
+                            Джонс,
+                            она пытается восстановить личную жизнь и карьеру детектива.</p>
+                        <a href="https://www.kinopoisk.ru/series/817508/" class="btn btn-primary">На Кинопоиске</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card" style="width: 18rem; height: 42rem;">
+                    <img class="card-img-top" src="../лаба 6/10.jpg" alt="holidays">
+                    <div class="card-body">
+                        <h5 class="card-title">Каникулы мечты</h5>
+                        <p class="card-text">Пара на грани развода держит лицо на семейном празднике.
+                            Звездное драмеди об изнанке показательного счастья.</p>
+                        <a href="https://www.kinopoisk.ru/film/744986/" class="btn btn-primary">На Кинопоиске</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card" style="width: 18rem; height: 42rem;">
+                    <img class="card-img-top" src="../лаба 6/11.jpg" alt="ein">
+                    <div class="card-body">
+                        <h5 class="card-title">Эйнштейн и Эддингтон</h5>
+                        <p class="card-text">Ученые занимаются наукой на фоне Первой мировой войны. Биографическая драма
+                            — гимн величию ума и прогресса.</p>
+                        <a href="https://www.kinopoisk.ru/film/313179/" class="btn btn-primary">На Кинопоиске</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card" style="width: 18rem; height: 42rem;">
+                    <img class="card-img-top" src="../лаба 6/12.jpg" alt="hamlet">
+                    <div class="card-body">
+                        <h5 class="card-title">Гамлет</h5>
+                        <p class="card-text">Театральная постановка Гамлета. Все.</p>
+                        <a href="https://www.kinopoisk.ru/film/474867/" class="btn btn-primary">На Кинопоиске</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class = "container">
+        <h1>Фильмография</h1>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">Год</th>
+                    <th scope="col">Фильм(русское название)</th>
+                    <th scope="col">Фильм(оригинальное название)</th>
+                    <th scope="col">Роль</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>2008</td>
+                    <td>Эйнштейн и Эддингтон</td>
+                    <td>Einstein and Eddington</td>
+                    <td>Артур Эддингтон</td>
+                </tr>
+                <tr>
+                    <td>2009</td>
+                    <td>Гамлет</td>
+                    <td>Hamlet</td>
+                    <td>Гамлет</td>
+                </tr>
+                <tr>
+                    <td>2010</td>
+                    <td>Доктор Кто</td>
+                    <td>Doctor Who</td>
+                    <td>Доктор</td>
+                </tr>
+                <tr>
+                    <td>2014</td>
+                    <td>Каникулы мечты</td>
+                    <td>What We Did on Our Holiday</td>
+                    <td>Дуг Маклеод</td>
+                </tr>
+                <tr>
+                    <td rowspan="2">2019</td>
+                    <td>Благие знамения</td>
+                    <td>Good Omens</td>
+                    <td>Кроули</td>
+                </tr>
+                <tr>
+                    <td>Джессика Джонс</td>                    
+                    <td>Marvel's Jessica Jones</td>
+                    <td>Пурпурный человек</td>
+                </tr>
+                <tr>
+                    <td rowspan="2">2021</td>
+                    <td>Вокруг света за 80 дней</td>                    
+                    <td>Around the World in 80 Days</td>
+                    <td>Филеас Фогг</td>
+                </tr>
+                <tr>
+                    <td>Постановка</td>                   
+                    <td>Staged</td>
+                    <td>Он сам</td>
+                </tr>                
+                
+            </tbody>
+
+        </table>
+    </div>
+</body>
+
+</html>

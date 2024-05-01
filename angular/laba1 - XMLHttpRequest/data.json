@@ -1,0 +1,48 @@
+{
+    "vehicle": [
+        {
+            "brand": "Lada",
+            "model": "Niva",
+            "yearOfIssue": 2015,
+            "vinNumber": 111,
+            "registrationNumber": 222,
+            "owner": {
+                "surname": "Иванов",
+                "name": "Иван",
+                "patronymic": "Иванович",
+                "birthDate": "2004-09-06",
+                "documentType": "Passport",
+                "documentSerie": 111,
+                "documentNumber": 222
+            },
+            "withScratches": true,
+            "colors": [
+                "red",
+                "blue",
+                "green",
+                "black"
+            ]
+        },
+        {
+            "Brand": "neLada",
+            "Model": "neNiva",
+            "YearOfIssue": 2016,
+            "VINnumber": 333,
+            "RegistrationNumber": 444,
+            "owner": {
+                "surname": "неИванов",
+                "name": "неИван",
+                "patronymic": "неИванович",
+                "birthDate": "2003-09-06",
+                "documentType": "Passport",
+                "documentSerie": 333,
+                "documentNumber": 444
+            },
+            "withScratches": false,
+            "colors": [
+                "white",
+                "black"
+            ]
+        }
+    ]
+}

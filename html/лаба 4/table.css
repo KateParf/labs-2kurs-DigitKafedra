@@ -1,0 +1,98 @@
+/* таблица */
+table {
+    /* Промежутки между ячейками таблицы убираются */
+    border-collapse: collapse;
+    /* внешние границы таблицы серого цвета толщиной 1px */
+    border: 1px solid grey;
+    /* шрифт во всей таблице - Arial */
+    font-family: Arial;
+    
+    margin: auto;
+}
+
+tr.even {
+    background-color: lightblue;
+}
+
+tr.odd {
+    background-color: lightgreen;
+}
+
+th {
+    /* границы ячеек заголовков таблицы */
+    border: 1px solid grey;
+    background-color: lightgrey;
+    text-align: left;
+    padding: 5px;
+}
+
+td {
+    /* границы ячеек тела таблицы */
+    border: 1px solid grey;
+    text-align: justify;
+    padding: 5px;
+}
+
+caption {
+    font-size: 30px;
+}
+
+
+/* заголовки */
+h1 {
+    font-size: 36px;
+    color: darkblue;
+    margin: 10px;
+    border: 2px dotted rgb(30, 101, 11);
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: darkblue;
+    padding-left: 5px;
+    border-left: 6px solid rgb(30, 101, 11);
+}
+
+/* параграфы */
+p {
+    color: green;
+    text-align: justify;
+}
+
+/* списки */
+ul,
+ol,
+dl {
+    color: green;
+}
+
+ul {
+    list-style-type: square;
+}
+
+ol {
+    list-style-type: upper-roman;
+}
+
+/* ссылки */
+a {
+    font-size: 16px;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(0, 102, 149);
+}
+
+.header {
+    text-align: right;
+}
+
+div.header a {
+    color: darkblue;
+    display: inline-block;
+    padding: 2px;
+    border: 2px solid;
+    border-radius: 4px;
+    border-color: darkblue;
+}

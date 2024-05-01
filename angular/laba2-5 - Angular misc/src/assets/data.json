@@ -1,0 +1,26 @@
+[
+    {
+        "brand": "Lada",
+        "model": "Niva",
+        "yearOfIssue": 2015,
+        "vinNumber": 111,
+        "registrationNumber": 222,
+        "withScratches": true
+    },   
+    {
+        "brand": "neLada",
+        "model": "neNiva",
+        "yearOfIssue": 2016,
+        "vinNumber": 333,
+        "registrationNumber": 444,
+        "withScratches": false
+    },
+    {
+        "brand": "Lada",
+        "model": "neNiva",
+        "yearOfIssue": 2017,
+        "vinNumber": 555,
+        "registrationNumber": 666,
+        "withScratches": false
+    }
+]

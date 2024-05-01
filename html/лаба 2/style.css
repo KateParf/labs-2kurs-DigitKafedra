@@ -1,0 +1,187 @@
+body {
+    background-color: rgb(236, 250, 214);
+}
+
+.content {
+    font-size: 20px;
+    margin: 5px;
+    font-family: Arial;
+    display: flex;
+}
+
+.content-left {
+    background-color: rgb(250, 250, 250);
+    margin: 10px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.content-right {
+    background-color: rgb(255, 255, 255);
+    margin: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    
+    text-align: center;
+}
+
+img.image {
+    width: 300px;
+    height: 300px;
+    padding-top: 10px;
+}
+
+/* заголовки */
+h1 {
+    font-size: 36px;
+    color: darkblue;
+    margin: 10px;
+    border: 2px dotted rgb(30, 101, 11);
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 { color: darkblue;
+    padding-left: 5px;
+    border-left: 6px solid rgb(30, 101, 11);
+}
+
+/* параграфы */
+p {
+    color: green;
+    text-align: justify;
+}
+
+/* списки */
+ul,
+ol,
+dl {
+    color: green;
+}
+
+ul {
+    list-style-type: square;
+}
+
+ol {
+    list-style-type: upper-roman;
+}
+
+/* ссылки */
+a {
+    font-size: 16px;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(0, 102, 149);
+}
+.header{
+    text-align: right;
+}
+div.header a{
+    color: darkblue;
+    display: inline-block;
+    padding: 2px; 
+    border: 2px solid; 
+    border-radius: 4px;
+    border-color: darkblue;
+}
+
+/* ----- лаба 3 divы */
+div.container {
+    background-color: darkseagreen;
+    display: flex;
+    justify-content: center;
+}
+div.container div.block{
+    background-color: rgb(80, 134, 80);
+    width: 200px;
+    height: 200px;  
+}
+div.container img{
+    width: 200px;
+}
+
+div.container-2 {
+    background-color: rgb(85, 133, 156);
+    height: 400px;
+    display: flex;
+    justify-content: space-around; 
+    align-items: center;
+}
+div.container-2 div.block-2{
+    background-color:  rgb(0, 102, 149);
+    width: 200px;
+    height: 200px;     
+}
+
+div.container-3 {
+    background-color: white;
+    border: 2px solid;
+    height: 500px;
+    display: flex;
+    
+    flex-wrap: wrap; 
+    
+    justify-content: space-around; 
+    
+    align-content: space-evenly;
+}
+div.container-3 div.block-3{
+    background-color:  rgb(120, 120, 120);
+    border: 2px solid;
+    border-color: darkblue;
+    width: 200px;
+    height: 200px;     
+}
+
+div.container-4 {
+    background-color: white;
+    border: 2px solid;
+    height: 400px;
+    width: 400px;
+}
+/*  top – сдвиг от «обычной» верхней границы
+    bottom – сдвиг от нижней границы
+    left – сдвиг слева
+    right – сдвиг справа 
+*/
+div.container-4 div.block-41{
+    border: 2px solid;
+    border-color: red;
+    width: 100px;
+    height: 100px;     
+
+    position: relative;
+    top: 100px;
+    left: 50px;
+}
+div.container-4 div.block-42{
+    border: 2px solid;
+    border-color: darkblue;
+    width: 100px;
+    height: 100px;     
+
+    position: relative;
+    top: 60px;
+    left: 110px;
+}
+div.container-4 div.block-43{
+    border: 2px solid;
+    border-color: darkgreen;
+    width: 100px;
+    height: 100px;     
+
+    position: relative;
+    top: 20px;
+    left: 170px;
+}
+
+.catimage img{
+    width: 100px;
+    height: 100px;
+    
+    position: fixed;
+    right: 0px;
+    bottom: 0px;
+}

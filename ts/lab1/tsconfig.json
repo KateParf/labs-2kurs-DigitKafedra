@@ -1,0 +1,23 @@
+{
+    "compilerOptions": {
+      "composite": true,
+      "outDir": "./dist",
+      "rootDir": "src",
+      "declaration": true,
+      "noImplicitAny": true,
+      "esModuleInterop": true,
+      //"module": "commonjs",
+      "target": "ES2020",
+      "experimentalDecorators": true,
+      "types": [
+      ],
+      "lib": [
+        "ES2020",
+        "dom"
+      ]
+    },
+    "exclude": [
+      "node_modules",
+      "dist"
+    ]
+}

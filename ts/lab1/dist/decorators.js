@@ -1,0 +1,26 @@
+//---------1
+/*
+  декоратор для МЕТОДА для больших букв
+  @target
+  @method
+  @descriptor - указатель на метод - свойство value содержит определение функции
+*/
+export function upperInfo(target, method, descriptor) {
+    const originalMethod = descriptor.value;
+    descriptor.value = function (...args) {
+        let returnValue = originalMethod.apply(this, args);
+        return returnValue.toUpperCase();
+    };
+}
+/*
+  декоратор для класса
+  Декоратор класса представляет функцию, которая принимает один параметр:
+  function classDecoratorFn(constructor: Function) { }
+  Декоратор с помощью функции Object.seal запрещает расширение прототипа класса User.
+*/
+export function notchangable(constructor) {
+    console.log("sealed decorator");
+    console.log(constructor);
+    Object.freeze(constructor);
+    Object.freeze(constructor.prototype);
+}

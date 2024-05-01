@@ -1,0 +1,10 @@
+<div>
+    <h3>Машинки</h3>
+    <ul>
+        <li *ngFor="let vehicle of vehicles"> {{vehicle.brand}} {{vehicle.model}}  {{vehicle.yearOfIssue}}</li>
+    </ul>
+</div>
+
+
+<button (click)="getJson()">Считать json</button>
+<button (click)="goHome()">На главную</button>

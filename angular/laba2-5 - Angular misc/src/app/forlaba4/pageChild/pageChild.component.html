@@ -1,0 +1,40 @@
+<div class="formsContainer">
+    <div>
+        <h1> тут реактивная форма</h1>
+        <app-pageParent></app-pageParent>
+    </div>
+
+    <div>
+        <h1> тут template-driven</h1>
+        <div class="template-driven-form">
+            <div>
+                <label for="name">Имя: </label> <br>
+                <input id="name" name="name" [(ngModel)]="name" (ngModelChange)="onNameChange()" />
+                <div class="errorForm" *ngIf="name === ''">Вы ничего не ввели</div>
+                <div class="errorForm" *ngIf="nameError === true">Неправильный формат имени</div>
+            </div>
+            <div>
+                <label for="email">Email: </label> <br>
+                <input id="email" type="email" name="email" [(ngModel)]="email" (ngModelChange)="onEmailChange()"/>
+                <div class="errorForm" *ngIf="email === ''">Вы ничего не ввели</div>
+                <div class="errorForm" *ngIf="emailError === true">Неправильный формат email</div>
+            </div>
+            <div>
+                <label for="age">Возраст: </label> <br>
+                <input id="age" type="number" name="age" [(ngModel)]="age" />
+                <div class="errorForm" *ngIf="age <= 0">Некорректное значение</div>
+            </div>
+            <div>
+                <button class="submitForm" (click)="addUser()">Добавить</button>
+            </div>
+        </div>
+        <div>
+            <h3>Пользователи</h3>
+            <ul>
+                <li *ngFor="let user of users"> Имя: {{user.name}}, Email: {{user.email}}, Возраст: {{user.age}}</li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+<button (click)="goHome()">На главную</button>

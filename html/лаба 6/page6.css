@@ -1,0 +1,57 @@
+/*Для правильной работы элемента с data-bs-spy="scroll"*/
+body {
+    position: relative;
+}
+
+/*навбар*/
+nav{
+    height: 70px;
+}
+
+/* ссылки в навбаре*/
+nav .nav-pills  li.nav-item  a.active{
+    background-color:antiquewhite;
+    color: black;
+    margin: 5px;
+}
+nav#nav2 li.nav-item a:not(.disabled),
+nav#nav3 li.nav-item a:not(.disabled){
+    color: black;
+}
+nav#nav3{
+    position: fixed;
+}
+nav#nav3 .container-fluid{
+    text-align: center;
+    margin: 5px;
+    padding: 5px;
+}
+
+/* карусель*/
+.carousel {
+    width: 390px;
+}
+div.info{
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+div.info div.actor{
+    text-align: left;
+    margin-left: 10px;
+}
+
+/*карточки*/
+div.cards{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+.btn-primary{
+    color: black !important;
+    background-color: antiquewhite !important;
+    border-color: antiquewhite !important;
+}
+

@@ -1,0 +1,29 @@
+<div class="parent">
+    <h2>Страница-родитель с формой</h2>
+
+    <form [formGroup]="dataForm" (ngSubmit)="addUserInfo()">
+        <label for="formName">Имя: </label>
+        <input id="formName" type="text" formControlName="formName" />
+        <div class = "errorForm" *ngIf="dataForm.controls['formName'].invalid && dataForm.controls['formName'].touched">Не указано имя</div>
+
+        <label for="formEmail">Email: </label>
+        <input id="formEmail" type="email" formControlName="formEmail">
+        <div class = "errorForm" *ngIf="dataForm.controls['formEmail'].invalid && dataForm.controls['formEmail'].touched">Не указан email
+        </div>
+
+        <label for="formAge">Возраст: </label>
+        <input id="formAge" type="number" formControlName="formAge">
+        <div class = "errorForm" *ngIf="dataForm.controls['formAge'].invalid && dataForm.controls['formAge'].touched">Не указан возраст
+        </div>
+
+        <button type="submit" class = "submitForm" [disabled]="dataForm.invalid">Сохранить</button>
+    </form>
+
+    <div>
+        <h3>Пользователи</h3>
+        <ul>
+            <li *ngFor="let user of users"> Имя: {{user.name}}, возраст: {{user.age}}, почта: {{user.email}}</li>
+        </ul>
+    </div>
+
+</div>

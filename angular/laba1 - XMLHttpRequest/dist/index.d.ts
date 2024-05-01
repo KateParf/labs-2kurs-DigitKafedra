@@ -1,0 +1,1 @@
+declare function clicked(): void;

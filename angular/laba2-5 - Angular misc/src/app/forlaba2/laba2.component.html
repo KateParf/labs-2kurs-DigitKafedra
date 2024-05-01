@@ -1,0 +1,8 @@
+<div>
+    <h2>Это лабораторная №2</h2>
+    <label for="inputName">Пожалуйста, представьтесь </label>
+    <input type="text" id="inputName" [value]="userName" (change)="onChange($event)" placeholder="Введите имя">
+    <button (click)="showName()">Показать имя</button>
+    <p *ngIf="userName !== '' ">Привет, {{userName}}</p>
+</div>
+<div><button (click)="goHome()">На главную</button></div>
