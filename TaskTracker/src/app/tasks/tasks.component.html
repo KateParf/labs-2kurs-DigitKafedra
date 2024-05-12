@@ -1,0 +1,84 @@
+<div class="container p-lg-0">
+  <form [formGroup]="filter" class="row d-flex mb-3" (ngSubmit)="submitFilter()">
+    <div class="col-lg-2 col-12">
+      <label class="form-label" for="taskType">Направление</label>
+      <select class="form-control form-select" formControlName="taskType" id="taskType">
+        <option></option>
+        <option>Таск</option>
+        <option>Баг</option>
+      </select>
+    </div>
+
+    <div class="col-lg-2 col-12">
+      <label class="form-label" for="taskPriority">Приоритет</label>
+      <select class="form-control form-select" formControlName="taskPriority" id="taskPriority">
+        <option></option>
+        <option>Критичный</option>
+        <option>Высокий</option>
+        <option>Средний</option>
+        <option>Низкий</option>
+      </select>
+    </div>
+
+    <div class="col-lg-2 col-12">
+      <label class="form-label" for="taskStatus">Статус</label>
+      <select class="form-control form-select" formControlName="taskStatus" id="taskStatus">
+        <option></option>
+        <option>Не начато</option>
+        <option>В процессе</option>
+        <option>Выполнено</option>
+      </select>
+    </div>
+    <div class="col-2 mt-2 mt-lg-0 d-flex align-items-end">
+      <button type="submit" class="submitForm btn btn-primary">Найти</button>
+    </div>
+  </form>
+</div>
+
+<div class="container">
+  <div class="row d-flex justify-content-center justify-content-lg-start">
+
+    <div class="card mb-3 me-3 p-0 col-11 col-lg-5 " *ngFor="let task of tasksArr">
+      <div class="card-header d-flex justify-content-between">
+        <div># {{ task.id }}</div>
+        <div class="d-flex justify-content-end">
+          <button (click)="onDelete(task)">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="bi bi-trash" viewBox="0 0 16 16">
+              <path
+                d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z" />
+              <path
+                d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z" />
+            </svg>
+          </button>
+          <a [routerLink]="['/taskForm', task.id]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="bi bi-pencil" viewBox="0 0 16 16">
+              <path
+                d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325" />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="card-body">
+        <div class="h5">{{ task.Title }}</div>
+
+        <div class="container p-0">
+          <div class="row d-flex justify-content-start">
+            <div class="col-4 card-text" *ngIf="task.Type"><strong>Направление:</strong> {{ task.Type }}</div>
+            <div class="col-4 card-text" *ngIf="task.Priority"><strong>Приоритет:</strong> {{ task.Priority }}</div>
+            <div class="col-4 card-text" *ngIf="task.Status"><strong>Статус:</strong> {{ task.Status }}</div>
+          </div>
+        </div>
+
+        <div class="card-text" *ngIf="task.Description"><strong>Описание:</strong> {{ task.Description }}</div>
+        <div class="card-text" *ngIf="task.Assignee"><strong>Исполнитель:</strong> {{ task.Assignee }}</div>
+      </div>
+      <div class="card-footer text-muted" *ngIf="task.CreatedAt">Создано: {{ task.CreatedAt | date:'medium' }}, {{
+        task.Creator }}</div>
+      <div class="card-footer text-muted" *ngIf="task.UpdatedAt">Обновлено: {{ task.UpdatedAt | date:'medium' }}, {{
+        task.Creator }}</div>
+
+    </div>
+
+  </div>
+</div>

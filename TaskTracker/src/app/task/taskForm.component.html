@@ -1,0 +1,71 @@
+<div class="container my-3">
+  <h1 class="ms-5">Редактор задач</h1>
+</div>
+
+<div class="container">
+  <form [formGroup]="form" class = "taskForm" (ngSubmit)="saveTask()">
+
+    <div class="mb-2">
+      <label class="form-label" for="taskTitle">Заголовок</label><label red>*</label>
+      <input type="text" required class="form-control" formControlName="taskTitle" id="taskTitle">
+      <div *ngIf="form.controls['taskTitle'].invalid && form.controls['taskTitle'].touched" red>
+        Не указано
+      </div>
+    </div>
+
+    <div class="container p-0">
+      <div class="row mb-2">
+        <div class="col-lg-4 col-12">
+          <label class="form-label" for="taskType">Направление</label><label red>*</label>
+          <select class="form-control form-select" formControlName="taskType" id="taskType">
+            <option>Таск</option>
+            <option>Баг</option>
+          </select>
+        </div>
+
+        <div class="col-lg-4 col-12">
+          <label class="form-label" for="taskPriority">Приоритет</label>
+          <select class="form-control form-select" formControlName="taskPriority" id="taskPriority">
+            <option>Критичный</option>
+            <option>Высокий</option>
+            <option>Средний</option>
+            <option>Низкий</option>
+          </select>
+        </div>
+
+        <div class="col-lg-4 col-12">
+          <label class="form-label" for="taskStatus">Статус</label><label red>*</label>
+          <select class="form-control form-select" formControlName="taskStatus" id="taskStatus">
+            <option>Не начато</option>
+            <option>В процессе</option>
+            <option>Выполнено</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="mb-2">
+      <label class="form-label" for="taskDescription">Описание</label>
+      <textarea role="textbox" rows="2" class="form-control" formControlName="taskDescription"
+        id="taskDescription"></textarea>
+    </div>
+
+    <div class="mb-2">
+      <label class="form-label" for="taskCreator">Создал задачу</label><label red>*</label>
+      <input type="text" class="form-control" formControlName="taskCreator" id="taskCreator" placeholder="ФИО">
+      <div *ngIf="form.controls['taskCreator'].invalid && form.controls['taskCreator'].touched" red>
+        Неправильный формат
+      </div>
+    </div>
+
+    <div class="mb-2">
+      <label class="form-label" for="taskAssignee">Назначить задачу</label>
+      <input type="text" class="form-control" formControlName="taskAssignee" id="taskAssignee" placeholder="ФИО">
+      <div *ngIf="form.controls['taskAssignee'].invalid && form.controls['taskAssignee'].touched" red>
+        Неправильный формат
+      </div>
+    </div>
+
+    <button type="submit" class="submitForm btn btn-primary" [disabled]="form.invalid">{{(id == 0) ? "Добавить" : "Изменить"}}</button>
+  </form>
+</div>
