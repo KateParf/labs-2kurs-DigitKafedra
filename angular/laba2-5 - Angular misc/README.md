@@ -1,27 +1,44 @@
-# DigitalDepartmentApplication
+## Лабораторная работа №2
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.3.
+Создайте Angular проект. Необходимо реализовать запрос имени пользователя и отображение приветствия пользователю по нажатию на кнопку.
+Продемонстрировать работу жизненного цикла компонента. Имплементируйте все методы жизненного цикла.
 
-## Development server
+## Лабораторная работа №3
+1. Добавить три страницы (компонента).
+2. Добавить навигационную панель для перемещения по страницам.
+3. При переходе на одну из страниц добавить параметр. Продемонстрировать значение параметра при переходе на эту страницу.
+4. С помощью navigate() или navigateByUrl() реализовать переход между страницами.
+5. При переходе на одну из страниц добавить guard, который подтверждает переход. При уходе с другой страницы добавить guard, который подтверждает переход.
+6. Добавить сервис, который считывает данные из json файла. Подключить сервис к одной из страниц, продемонстрировать запрос данных.
+7. Создать директиву, которая преобразует текст в курсивный
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Лабораторная работа №4
+1. Создать компонент, который содержит реактивную форму ввода данных. Компонент должен уметь при
+нажатии на кнопку «Сохранить» отправлять эти данные в родительский компонент. Использовать этот
+компонент на одной из страниц. Страница должна отображать список добавленных сущностей с
+помощью формы. Форма должна содержать валидацию. Пользователь не должен иметь возможность
+сохранять некорректные данные.
+2. Реализовать аналогичный компонент из 1 задания, но с использованием template-driven подхода.
+3. Стилизовать приложение
+   
+## Лабораторная работа №5
 
-## Code scaffolding
+1. Создать pipe с параметрами. Применить.
+2. Изменить код задания 6 лабораторной работы №3 так, чтобы использовался RxJs. Добавить обработку ошибки. Отобразить полученные данные на странице.
+3. Добавить интерсептор, который отлавливает ошибки. Продемонстрировать работоспособность.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Лабораторная работа №6
 
-## Build
+Реализовать упрощённую версию таск-трекера. В трекер можно добавлять задачи.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Каждая задача содержит следующие поля для заполнения:
+* Номер (генерируется автоматически)
+* Тип (bug или task)
+* Приоритет (critical/high/medium/low)
+* Статус
+* Заголовок
+* Описание
+* Исполнитель
+* Создатель
+* Дата и время создания (генерируется автоматически)
+* Дата и время последнего изменения (генерируется автоматически)
